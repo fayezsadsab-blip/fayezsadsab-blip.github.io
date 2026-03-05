@@ -3,7 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fayez | Mobile Developer</title>
+    <title>Fayez | Mobile Developer - iOS & Android Apps</title>
+    <meta name="description" content="Fayez Almalki - Mobile App Developer. Download SevenDimen, Balooty, Baloot Score, and Kalemat on iOS and Android. مطور تطبيقات جوال - فايز المالكي">
+    <meta name="keywords" content="Fayez, Almalki, mobile developer, iOS apps, Android apps, SevenDimen, Balooty, Baloot Score, Kalemat, card games, بلوت, بلوتي, خمن الكلمات, سفن دايمن, فايز المالكي">
+    <meta name="author" content="Fayez Almalki">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fayez | Mobile Developer - iOS & Android Apps">
+    <meta property="og:description" content="Download my mobile apps: SevenDimen, Balooty, Baloot Score, and Kalemat. Available on App Store and Google Play.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fayezam.com">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fayez | Mobile Developer">
+    <meta name="twitter:description" content="Download my mobile apps: SevenDimen, Balooty, Baloot Score, and Kalemat.">
+
+    <!-- App Links Meta Tags -->
+    <meta name="apple-itunes-app" content="app-id=6757943552">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fayez Almalki",
+        "url": "https://fayezam.com",
+        "jobTitle": "Mobile Developer",
+        "email": "fayez@fayezam.com",
+        "sameAs": [],
+        "knowsAbout": ["iOS Development", "Android Development", "Mobile Apps", "UI/UX Design"]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "SevenDimen",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "GameApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@type": "Person", "name": "Fayez Almalki" },
+            "installUrl": "https://apps.apple.com/app/sevendimen/id6757943552"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Balooty",
+            "alternateName": "بلوتي",
+            "operatingSystem": "iOS",
+            "applicationCategory": "GameApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@type": "Person", "name": "Fayez Almalki" },
+            "installUrl": "https://apps.apple.com/app/id6759253242"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Baloot Score",
+            "alternateName": "حاسبة لنا لهم",
+            "operatingSystem": "iOS, Android",
+            "applicationCategory": "UtilitiesApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@type": "Person", "name": "Fayez Almalki" },
+            "installUrl": "https://apps.apple.com/app/id6755610679"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Kalemat",
+            "alternateName": "خمن الكلمات",
+            "operatingSystem": "iOS",
+            "applicationCategory": "GameApplication",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@type": "Person", "name": "Fayez Almalki" },
+            "installUrl": "https://apps.apple.com/app/id6759669287"
+        }
+    ]
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -708,6 +789,187 @@
         body.en span[data-lang-ar] { display: none; }
         body.en span[data-lang-en] { display: inline; }
 
+        /* Apps Section */
+        .apps-section {
+            padding: 6rem 3rem;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .app-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .app-category {
+            font-size: 0.8rem;
+            color: var(--accent-secondary);
+            margin-bottom: 1rem;
+            font-family: 'Space Mono', monospace;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+        }
+
+        .app-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            min-height: 80px;
+        }
+
+        .app-store-links {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .store-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .store-badge:hover {
+            border-color: var(--accent-primary);
+            background: rgba(99, 102, 241, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .store-badge svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .store-badge .store-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.2;
+        }
+
+        .store-badge .store-info small {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+        }
+
+        .store-badge .store-info span {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        /* Platform Tags */
+        .app-platforms {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .platform-tag {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Form Select */
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 1rem center;
+        }
+
+        [dir="ltr"] .form-group select {
+            background-position: right 1rem center;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             nav {
@@ -724,8 +986,18 @@
 
             .quote-section,
             .about-section,
+            .apps-section,
             .contact-section {
                 padding: 4rem 1.5rem;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .app-description {
+                min-height: auto;
             }
 
             .contact-card {
@@ -755,6 +1027,7 @@
             <ul class="nav-links">
                 <li><a href="#home"><span data-lang-ar>الرئيسية</span><span data-lang-en>Home</span></a></li>
                 <li><a href="#about"><span data-lang-ar>عني</span><span data-lang-en>About</span></a></li>
+                <li><a href="#apps"><span data-lang-ar>تطبيقاتي</span><span data-lang-en>My Apps</span></a></li>
                 <li><a href="#contact"><span data-lang-ar>تواصل</span><span data-lang-en>Contact</span></a></li>
             </ul>
             <div class="lang-switcher">
@@ -878,6 +1151,157 @@
         </div>
     </section>
 
+    <!-- Apps Section -->
+    <section class="apps-section" id="apps">
+        <div class="section-header">
+            <span class="section-tag">// <span data-lang-ar>تطبيقاتي</span><span data-lang-en>My Apps</span></span>
+            <h2 class="section-title">
+                <span data-lang-ar>تطبيقات نشرتها</span>
+                <span data-lang-en>Published Apps</span>
+            </h2>
+        </div>
+        <div class="apps-grid">
+
+            <!-- SevenDimen -->
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/7b/eb/657beb08-0325-953e-d046-7d722cb14488/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.png" alt="SevenDimen App Icon" loading="lazy" width="100" height="100">
+                </div>
+                <h3 class="app-name">SevenDimen</h3>
+                <span class="app-category">
+                    <span data-lang-ar>ألعاب ورق</span>
+                    <span data-lang-en>Card Game</span>
+                </span>
+                <div class="app-platforms">
+                    <span class="platform-tag">iOS</span>
+                    <span class="platform-tag">Android</span>
+                </div>
+                <p class="app-description">
+                    <span data-lang-ar>لعبة ورق استراتيجية لـ 4 لاعبين ضد ذكاء اصطناعي. تخلّص من أوراقك بترتيب تسلسلي مع خيارات المضاعفة والثلاثية. بدون إنترنت وبدون حساب.</span>
+                    <span data-lang-en>A strategic 4-player card game against smart AI. Empty your hand by playing cards in sequence with options to double or triple bets. No internet, no account needed.</span>
+                </p>
+                <div class="app-store-links">
+                    <a href="https://apps.apple.com/app/sevendimen/id6757943552" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download SevenDimen on App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>حمّل من</span><span data-lang-en>Download on</span></small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.sevendimen.game" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download SevenDimen on Google Play">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.77L14.27 12.68 3.18.23C2.79.54 2.55 1.04 2.55 1.63v20.37c0 .59.24 1.09.63 1.4l.01.01-.01-.01v-.63zm1.56.35l12.39-6.95-2.72-2.72L4.74 23.77l.01.01-.01.34zm12.39-16.6L4.74.23l8.67 9.17 2.72-2.72 1-.56zM21.41 11l-3.56-2L14.97 12l2.88 3 3.56-2c.63-.35.63-1.65 0-2z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>متوفر على</span><span data-lang-en>Get it on</span></small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Balooty -->
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/23/54/54/23545433-bb7d-6dd8-ef52-cb285e5f23b3/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.png" alt="Balooty App Icon" loading="lazy" width="100" height="100">
+                </div>
+                <h3 class="app-name">
+                    <span data-lang-ar>بلوتي</span>
+                    <span data-lang-en>Balooty</span>
+                </h3>
+                <span class="app-category">
+                    <span data-lang-ar>ألعاب ورق</span>
+                    <span data-lang-en>Card Game</span>
+                </span>
+                <div class="app-platforms">
+                    <span class="platform-tag">iOS</span>
+                </div>
+                <p class="app-description">
+                    <span data-lang-ar>العب بلوت بنظامي صن وحكم ضد خصوم أذكياء. بدون إنترنت وبدون حساب مع دعم كامل للعربية والإنجليزية وشرح طريقة اللعب.</span>
+                    <span data-lang-en>Play Baloot in Sun and Hokom modes against smart AI opponents. No internet, no account required, with full Arabic/English support and a built-in tutorial.</span>
+                </p>
+                <div class="app-store-links">
+                    <a href="https://apps.apple.com/app/id6759253242" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download Balooty on App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>حمّل من</span><span data-lang-en>Download on</span></small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Baloot Score -->
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/30/a0/2c/30a02c32-bd7d-2344-c334-2623afa0de18/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.png" alt="Baloot Score App Icon" loading="lazy" width="100" height="100">
+                </div>
+                <h3 class="app-name">
+                    <span data-lang-ar>حاسبة لنا لهم</span>
+                    <span data-lang-en>Baloot Score</span>
+                </h3>
+                <span class="app-category">
+                    <span data-lang-ar>أدوات</span>
+                    <span data-lang-en>Utilities</span>
+                </span>
+                <div class="app-platforms">
+                    <span class="platform-tag">iOS</span>
+                    <span class="platform-tag">Android</span>
+                </div>
+                <p class="app-description">
+                    <span data-lang-ar>تطبيق حساب نقاط البلوت مع مشاركة الجلسة مباشرة عبر QR. تابع النتائج لحظة بلحظة على أجهزة متعددة وشارك النتيجة النهائية كصورة.</span>
+                    <span data-lang-en>Baloot score tracker with live session sharing via QR code. Track scores in real-time across devices and share final results as an image.</span>
+                </p>
+                <div class="app-store-links">
+                    <a href="https://apps.apple.com/app/id6755610679" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download Baloot Score on App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>حمّل من</span><span data-lang-en>Download on</span></small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.balootscore.app" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download Baloot Score on Google Play">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.77L14.27 12.68 3.18.23C2.79.54 2.55 1.04 2.55 1.63v20.37c0 .59.24 1.09.63 1.4l.01.01-.01-.01v-.63zm1.56.35l12.39-6.95-2.72-2.72L4.74 23.77l.01.01-.01.34zm12.39-16.6L4.74.23l8.67 9.17 2.72-2.72 1-.56zM21.41 11l-3.56-2L14.97 12l2.88 3 3.56-2c.63-.35.63-1.65 0-2z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>متوفر على</span><span data-lang-en>Get it on</span></small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kalemat -->
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/e9/5d/b7e95d2b-ac4c-9a82-ef1d-4a4bec26a944/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.png" alt="Kalemat App Icon" loading="lazy" width="100" height="100">
+                </div>
+                <h3 class="app-name">
+                    <span data-lang-ar>خمن الكلمات</span>
+                    <span data-lang-en>Kalemat</span>
+                </h3>
+                <span class="app-category">
+                    <span data-lang-ar>ألغاز</span>
+                    <span data-lang-en>Puzzle</span>
+                </span>
+                <div class="app-platforms">
+                    <span class="platform-tag">iOS</span>
+                </div>
+                <p class="app-description">
+                    <span data-lang-ar>لعبة تخمين كلمات عربية مع 6 محاولات لاكتشاف الكلمة. تحديات يومية ووضع لا نهائي مع تلميحات ذكية وألوان توجيهية. بدون إنترنت.</span>
+                    <span data-lang-en>Arabic word-guessing game with 6 attempts to discover hidden words. Daily challenges, infinite mode, smart hints, and color-coded feedback. Works offline.</span>
+                </p>
+                <div class="app-store-links">
+                    <a href="https://apps.apple.com/app/id6759669287" target="_blank" rel="noopener noreferrer" class="store-badge" aria-label="Download Kalemat on App Store">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-info">
+                            <small><span data-lang-ar>حمّل من</span><span data-lang-en>Download on</span></small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="section-header">
@@ -895,11 +1319,25 @@
                         <span data-lang-en>Send a Message</span>
                     </h2>
                     <p>
-                        <span data-lang-ar>عندك فكرة؟ مشروع؟ أو حتى مجرد سلام؟ راسلني!</span>
-                        <span data-lang-en>Got an idea? A project? Or just want to say hi? Message me!</span>
+                        <span data-lang-ar>عندك ملاحظات على تطبيقاتي؟ اقتراح؟ أو حتى مجرد سلام؟ راسلني!</span>
+                        <span data-lang-en>Got feedback on my apps? A suggestion? Or just want to say hi? Message me!</span>
                     </p>
                 </div>
                 <form class="contact-form" action="mailto:fayez@fayezam.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="app-select">
+                            <span data-lang-ar>التطبيق (اختياري)</span>
+                            <span data-lang-en>App (optional)</span>
+                        </label>
+                        <select id="app-select" name="app">
+                            <option value="" data-ar="اختر تطبيقاً..." data-en="Select an app..."></option>
+                            <option value="SevenDimen">SevenDimen</option>
+                            <option value="Balooty" data-ar="بلوتي" data-en="Balooty"></option>
+                            <option value="Baloot Score" data-ar="حاسبة لنا لهم" data-en="Baloot Score"></option>
+                            <option value="Kalemat" data-ar="خمن الكلمات" data-en="Kalemat"></option>
+                            <option value="Other" data-ar="أخرى" data-en="Other"></option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="name">
                             <span data-lang-ar>الاسم</span>
@@ -978,6 +1416,11 @@
                 el.placeholder = lang === 'ar' ? el.dataset.placeholderAr : el.dataset.placeholderEn;
             });
 
+            // Update select options
+            document.querySelectorAll('select option[data-ar]').forEach(opt => {
+                opt.textContent = lang === 'ar' ? opt.dataset.ar : opt.dataset.en;
+            });
+
             // Save preference
             localStorage.setItem('preferred-lang', lang);
         }
@@ -994,6 +1437,10 @@
             // Set initial placeholders for Arabic
             document.querySelectorAll('[data-placeholder-ar]').forEach(el => {
                 el.placeholder = el.dataset.placeholderAr;
+            });
+            // Set initial select options for Arabic
+            document.querySelectorAll('select option[data-ar]').forEach(opt => {
+                opt.textContent = opt.dataset.ar;
             });
         }
 
@@ -1012,7 +1459,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.about-card, .quote-container, .contact-card').forEach(el => {
+        document.querySelectorAll('.about-card, .quote-container, .contact-card, .app-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
